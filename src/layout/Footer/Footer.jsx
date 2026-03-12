@@ -3,7 +3,9 @@ import NavFooter from "./NavFooter"
 
 export default function Footer() {
     return (
-        <footer className="min-h-80 bg-darkGray w-full flex flex-col items-center relative mt-30  justify-between">
+        <footer className="min-h-80 bg-darkGray w-full flex flex-col items-center relative mt-30  justify-between"
+            style={{ background: "linear-gradient(180deg, #1a1a1a 0%, #141414 50%, #0D0D0D 100%)" }}
+        >
             <div className="flex flex-col sm:flex-row items-center justify-around w-full sm:mt-8">
                 <Image
                     src="/logo.png"
