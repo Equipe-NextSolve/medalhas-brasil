@@ -3,13 +3,15 @@ import React from "react";
 import Carousel from "./Carousel";
 import ContentInitial from "./ContentInitial";
 import ContentEvent from "./ContentEvent";
+import CardsProduts from "./CardsProduts";
 
 export default function HomeMain() {
   return (
-    <main className="min-h-screen flex-1">
+    <main className=" ">
       <Carousel />
       <ContentInitial />
       <ContentEvent />
+      <CardsProduts  />
     </main>
   );
 }

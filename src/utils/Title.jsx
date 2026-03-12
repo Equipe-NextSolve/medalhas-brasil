@@ -14,6 +14,5 @@ export default function Title({label}) {
                 <span className="h-0.5 mt-1 bg-yellow w-full block rounded-lg" style={{ boxShadow: '0 3px 5px rgba(0, 0, 0, 0.3)' }}></span>
             </div>
         </motion.div>
-        
     )
 }
