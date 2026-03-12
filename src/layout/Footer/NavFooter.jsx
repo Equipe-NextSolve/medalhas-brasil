@@ -5,7 +5,7 @@ const classNavItems = "text-white cursor-pointer hover:text-yellow transition-al
 
 export default function NavFooter() {
     return (
-        <nav className="flex flex-col gap-8 sm:flex-wra sm:flex-row w-full max-w-200 px-5 justify-between">
+        <nav className="flex flex-col gap-8 sm:flex-wrap sm:flex-row w-full max-w-200 px-5 justify-between">
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Institual</h2>
                 <p className={classNavItems}>Sobre nós</p>
