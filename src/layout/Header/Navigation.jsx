@@ -24,7 +24,7 @@ export default function Navigation() {
                         </li>
                     ))}
                 </ul>
-                <Link href='' className="bg-black text-white p-2 rounded-md hover:bg-gray-800 transition">Orçamentos</Link>
+                <Link href='/budget' className="bg-black text-white p-2 rounded-md hover:bg-gray-800 transition">Orçamentos</Link>
             </div>
         </nav>
     )

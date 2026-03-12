@@ -9,6 +9,7 @@ export default function Logo() {
                     width={200}
                     height={200}
                     src='/logo.png'
+                    alt='logo'
                     className=''
                 />
             </div>
