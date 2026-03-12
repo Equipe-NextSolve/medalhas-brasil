@@ -1,10 +1,11 @@
+'use client'
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-// import SocialButton, {socialLinks} from "./SocialLinks";
+import SocialButton, { socialLinks } from "./SocialLinks";
 const classNavItems = "text-white cursor-pointer hover:text-yellow transition-all duration-300 hover:translate-x-1";
 
 export default function NavFooter() {
     return (
-        <nav className="flex w-[100%] max-w-200 justify-between">
+        <nav className="flex flex-col gap-8 sm:flex-wra sm:flex-row w-full max-w-200 px-5 justify-between">
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Institual</h2>
                 <p className={classNavItems}>Sobre nós</p>
@@ -18,10 +19,10 @@ export default function NavFooter() {
             </div>
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Redes Socias</h2>
-                <div className="flex gap-5">
-                    <p className={classNavItems}><FaInstagram className="text-2xl"/></p>
-                    <p className={classNavItems}><FaEnvelope className="text-2xl"/></p>
-                    <p className={classNavItems}><FaWhatsapp className="text-2xl"/></p>
+                 <div className="flex gap-3 mt-1">
+                    {socialLinks.map((s) => (
+                        <SocialButton key={s.label} {...s} />
+                    ))}
                 </div>
             </div>
         </nav>
