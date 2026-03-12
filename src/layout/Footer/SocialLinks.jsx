@@ -14,7 +14,7 @@ export default function SocialButton({ icon: Icon, label, href }) {
       href={href}
       aria-label={label}
       className="
-        flex flex-col items-center gap-1.5 px-3 py-2 w-[30%] max-w-15
+        flex flex-col items-center gap-1.5 px-3 py-2 w-[30%] max-w-25
         bg-yellow/5 border border-yellow/20 rounded-xl
         transition-all duration-300 ease-in-out
         hover:bg-yellow/15 hover:border-yellow/60
