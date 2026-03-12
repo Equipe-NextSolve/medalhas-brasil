@@ -1,6 +1,5 @@
-import HomeMain from "@/components/home/HomeMain";
-
+import HomeMain from "@/components/Home/Home"
 
 export default function Home() {
-  return HomeMain
+  return (<HomeMain/>)
 }
