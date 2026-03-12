@@ -3,15 +3,27 @@ import Image from 'next/image'
 
 export default function Carousel() {
     return (
-        <div className="flex items-center justify-center w-full h-[600px] pt-60">
-            <div className="w-full">
+        <div className="w-full min-h-screen pt-20">
+            <div className="w-ful">
+
+                {/* Desktop */}
                 <Image
                     src="/slide.png"
                     width={1280}
                     height={600}
                     alt="Slide"
-                    className="w-full h-full object-cover"
+                    className="hidden md:block w-full h-full object-contain"
                 />
+
+                {/* Mobile */}
+                <Image
+                    src="/slide-mobile.png"
+                    width={600}
+                    height={800}
+                    alt="Slide"
+                    className="block md:hidden w-full h-full object-contain"
+                />
+
             </div>
         </div>
     )
