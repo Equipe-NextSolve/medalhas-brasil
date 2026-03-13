@@ -4,14 +4,22 @@ import { cn } from "@/lib/utils"
 
 function Textarea({ className, ...props }) {
   return (
-    <textarea
-      data-slot="textarea"
-      className={cn(
-        "border-input dark:bg-input/30 focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 disabled:bg-input/50 dark:disabled:bg-input/80 rounded-lg border bg-transparent px-2.5 py-2 text-base transition-colors focus-visible:ring-3 aria-invalid:ring-3 md:text-sm flex field-sizing-content min-h-16 w-full outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
-        className
-      )}
-      {...props}
-    />
+    <div className="relative w-full group">
+      <textarea
+        data-slot="textarea"
+        className={cn(
+          "peer w-full min-w-0 outline-none resize-none",
+          "min-h-24 rounded-t-md px-3 pt-4 pb-2",
+          "text-sm font-medium text-black placeholder:text-transparent",
+          "bg-white border-0 border-b-2 border-gray/40",
+          "transition-all duration-200 ease-in-out",
+          "focus:border-yellow",
+          "disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
   )
 }
 
