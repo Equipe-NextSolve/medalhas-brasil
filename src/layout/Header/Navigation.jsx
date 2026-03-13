@@ -3,9 +3,8 @@ import Link from 'next/link'
 
 export default function Navigation() {
     const dtLinks = [
-        { label: 'Home', href: '#' },
-        { label: 'Quem Somos', href: '#' },
-        { label: 'Fale Conosco', href: '#' },
+        { label: 'Home', href: '/' },
+        { label: 'Quem Somos', href: '/About' },
         { label: 'Suporte', href: '#' },
     ]
 

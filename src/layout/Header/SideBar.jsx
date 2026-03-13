@@ -34,9 +34,9 @@ export default function SideBar() {
 
   const dt_links = [
     { label: 'Home', href: '#' },
-    { label: 'Quem Somos', href: '#' },
-    { label: 'Fale Conosco', href: '#' },
+    { label: 'Quem Somos', href: '/About' },
     { label: 'Suporte', href: '#' },
+    { label: 'Orçamento', href: '#' },
   ];
 
   return (
@@ -108,13 +108,13 @@ export default function SideBar() {
               </button>
             </div>
 
-            <nav className="flex-1 flex flex-col px-4 py-4 gap-[2px] overflow-y-auto">
+            <nav className="flex-1 flex flex-col px-4 py-4 gap-[2px] overflow-y-auto cursor-pointer">
               {dt_links.map((link, index) => (
                 <Link
                   key={index}
                   href={link.href}
                   onClick={closeMenu}
-                  className="nav-item flex items-center px-4 py-[13px] rounded-[10px] text-base font-medium text-[#0D0D0D] no-underline"
+                  className="nav-item flex items-center px-4 py-[13px] rounded-[10px] text-base font-medium text-[#0D0D0D] no-underline cursor-pointer  "
                 >
                   {link.label}
                 </Link>

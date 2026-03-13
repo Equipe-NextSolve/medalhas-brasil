@@ -7,7 +7,7 @@ import CardsProduts from "./CardsProduts";
 
 export default function HomeMain() {
   return (
-    <main className=" ">
+    <main className="">
       <Carousel />
       <ContentInitial />
       <ContentEvent />

@@ -1,17 +1,37 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ContentEvent() {
+
+    const fadeLeft = {
+        hidden: { opacity: 0, x: -80 },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    const fadeRight = {
+        hidden: { opacity: 0, x: 80 },
+        visible: { opacity: 1, x: 0 }
+    };
+
     return (
-        <section className="relative w-full py-20 bg-gradient-to-br from-[#f0f0f0] via-[#e9e9e9] to-[#BFBFBF] overflow-hidden">
+        <section className="relative w-full py-20 bg-gradient-to-br from-[#f0f0f0] via-[#e9e9e9] to-[#BFBFBF] overflow-hidden" id="about">
 
             <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/40 blur-[120px] rounded-full"></div>
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#BFBFBF]/30 blur-[120px] rounded-full"></div>
 
             <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-                <div className="flex flex-col">
+                <motion.div
+                    className="flex flex-col"
+                    variants={fadeLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
 
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
                         Troféus e Medalhas Perfeitos para o Seu Evento!!
@@ -39,15 +59,21 @@ export default function ContentEvent() {
                         do papel!
                     </p>
 
-                    <Link
-                        href="#"
-                        className="w-fit bg-darkGray text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 hover:bg-gray-800 transition-all duration-300"
-                    >
-                        Fale com nosso Especialista
-                    </Link>
-                </div>
+                    <motion.div whileHover={{ scale: 1.05 }}>
+                        <Link href="/About" className="w-fit bg-darkGray text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition-all duration-300" >
+                            Saiba mais sobre nossa Empresa
+                        </Link>
+                    </motion.div>
+                </motion.div>
 
-                <div className="flex justify-center">
+                <motion.div
+                    className="flex justify-center"
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <div className="rounded-xl overflow-hidden shadow-xl">
                         <Image
                             src="/ilustrative4.png"
@@ -57,8 +83,7 @@ export default function ContentEvent() {
                             className="object-cover"
                         />
                     </div>
-                </div>
-
+                </motion.div>
             </div>
         </section>
     );
