@@ -8,16 +8,14 @@ export default function Footer() {
         >
             <div className="flex flex-col sm:flex-row items-center justify-around w-full sm:mt-8">
                 <Image
-                    src="/logo.png"
+                    src="/logo2.png"
                     alt="Logo"
                     width={140}
                     height={140}
                 />
                 <NavFooter/>
             </div>
-            <p className="bg-black h-10 w-full text-gray text-center flex items-center justify-center mt-7 text-sm sm:text-base sm:mt-0">
-                © 2025  Design Acessorios. Todos os direitos reservados.
-            </p>
+            <p className="bg-black h-10 w-full text-gray text-center flex items-center justify-center mt-7 text-sm sm:text-base sm:mt-0">© 2025  Design Acessorios. Todos os direitos reservados.</p>
         </footer>
     )
 }
