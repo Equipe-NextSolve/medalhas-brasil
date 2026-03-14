@@ -30,7 +30,7 @@ function SelectTrigger({ className, children, ...props }) {
         data-slot="select-trigger"
         className={cn(
           "peer w-full outline-none",
-          "h-12 rounded-t-md px-3 pt-4 pb-1",
+          "h-10 rounded-t-md px-3 pt-4 pb-1",
           "text-sm font-medium text-black",
           "bg-white border-0 border-b-2 border-gray/40",
           "transition-all duration-200 ease-in-out",
@@ -38,7 +38,8 @@ function SelectTrigger({ className, children, ...props }) {
           "flex items-center justify-between whitespace-nowrap select-none",
           "disabled:cursor-not-allowed disabled:opacity-40",
           "data-placeholder:text-gray/50",
-          className
+          "cursor-pointer",
+          
         )}
         {...props}
       >
@@ -47,7 +48,7 @@ function SelectTrigger({ className, children, ...props }) {
           <RxChevronDown className="size-4 text-gray/60 shrink-0 pointer-events-none transition-transform duration-200 data-[state=open]:rotate-180" />
         </SelectPrimitive.Icon>
       </SelectPrimitive.Trigger>
-      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow transition-all duration-300 peer-data-[state=open]:w-full" />
+      <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow transition-all duration-300 peer-data-[state=open]:w-full" />
     </div>
   )
 }
@@ -99,11 +100,12 @@ function SelectItem({ className, children, ...props }) {
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "relative flex w-full cursor-default select-none items-center",
+        "relative flex w-full cursor-pointer select-none items-center",
         "rounded-md py-2 pr-8 pl-3 text-sm text-black outline-none",
         "transition-colors duration-150",
         "focus:bg-yellow/10 focus:text-black",
         "data-disabled:pointer-events-none data-disabled:opacity-40",
+      
         className
       )}
       {...props}

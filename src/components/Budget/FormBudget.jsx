@@ -41,10 +41,10 @@ export default function FormBudget() {
     }
 
     return (
-        <div className='flex flex-col gap-10 w-full max-w-200'>
+        <div className='flex flex-col px-8 sm:px-0 gap-10 w-full max-w-200'>
             <h2>Preencha os campos abaixo</h2>
             <form action="" className='flex flex-col gap-7'>
-                <div className='flex w-full gap-10'>
+                <div className='flex flex-col sm:flex-row w-full gap-10'>
                     <div className="space-y-1 w-full">
                         <Label htmlFor="nome">Nome</Label>
                         <Input
@@ -77,7 +77,7 @@ export default function FormBudget() {
                     onChange={handleChange}
                     />
                 </div>   
-                <div className='flex w-full gap-10'>
+                <div className='flex flex-col sm:flex-row w-full gap-10'>
                     <div className="space-y-1 w-full">
                         <Label htmlFor="contato ">Contato</Label>
                         <Input
@@ -112,16 +112,16 @@ export default function FormBudget() {
                     </div>
                 </div>  
                       
-                <div className="space-y-1">
+                <div className="space-y-1 ">
                     <Label htmlFor="produto">Produto</Label>
-                    <Select onValueChange={handleSelectChange} value={formData.produto}>
+                    <Select onValueChange={handleSelectChange} value={formData.produto} className="cursor-pointer">
                     <SelectTrigger id="produto">
                         <SelectValue placeholder="Selecione um produto" />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value="produto-a">Produto A</SelectItem>
-                        <SelectItem value="produto-b">Produto B</SelectItem>
-                        <SelectItem value="produto-c">Produto C</SelectItem>
+                        <SelectItem value="produto-a" >Produto A</SelectItem>
+                        <SelectItem value="produto-b" >Produto B</SelectItem>
+                        <SelectItem value="produto-c" >Produto C</SelectItem>
                     </SelectContent>
                     </Select>
                 </div>
@@ -147,7 +147,20 @@ export default function FormBudget() {
                 />
                 </div>
                 
-                <Button type="submit" className="w-full">
+                <Button
+                    type="submit"
+                    className="
+                        w-full max-w-50 mx-auto py-2 cursor-pointer rounded-md
+                        bg-linear-to-r from-yellow-600 via-yellow-500 to-amber-400
+                        text-black font-bold tracking-wide text-[12px] sm:text-sm
+                        shadow-[0_4px_20px_rgba(217,153,35,0.35)]
+                        hover:shadow-[0_6px_28px_rgba(217,153,35,0.55)]
+                        hover:brightness-110
+                        hover:-translate-y-0.5
+                        active:translate-y-0 active:shadow-none
+                        transition-all duration-300 ease-in-out
+                    "
+                >
                     Enviar Orçamento
                 </Button>
                 

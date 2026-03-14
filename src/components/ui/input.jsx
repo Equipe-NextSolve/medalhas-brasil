@@ -10,7 +10,7 @@ function Input({ className, type, ...props }) {
         data-slot="input"
         className={cn(
           "peer w-full min-w-0 outline-none",
-          "h-12 rounded-t-md px-3 pt-4 pb-1",
+          "h-10 rounded-t-md px-3 pt-4 pb-1",
           "text-sm font-medium text-black placeholder:text-transparent",
           "bg-white border-0 border-b-2 border-gray/40",
           "transition-all duration-200 ease-in-out",
