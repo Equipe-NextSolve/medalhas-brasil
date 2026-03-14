@@ -51,7 +51,6 @@ export default function Carousel() {
                 </Swiper>
             </div>
 
-            {/* MOBILE */}
             <div className="block md:hidden">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}

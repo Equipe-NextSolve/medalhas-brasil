@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 export default function MedalAbout() {
@@ -30,7 +31,7 @@ export default function MedalAbout() {
                         <p>Garanta um prêmio especial, exclusivo e à altura da sua conquista.</p>
                     </div>
 
-                    <button className="mt-4 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition">Solicitar orçamento</button>
+                    <Link href='/budget' className="mt-4 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition">Solicitar orçamento</Link>
                 </motion.div>
 
                 <motion.div
