@@ -10,7 +10,7 @@ export default function Title({label}) {
             transition={{ duration: 0.6, ease: 'easeOut' }}
        >
             <div className="inline-block text-center">
-                <h1 className="text-black mt-10 text-3xl tracking-wide font-600">{label}</h1>
+                <h1 className="text-black mt-10 text-xl sm:text-3xl tracking-wide font-600">{label}</h1>
                 <span className="h-0.5 mt-1 bg-yellow w-full block rounded-lg" style={{ boxShadow: '0 3px 5px rgba(0, 0, 0, 0.3)' }}></span>
             </div>
         </motion.div>
