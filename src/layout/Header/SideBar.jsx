@@ -35,7 +35,7 @@ export default function SideBar() {
   const dt_links = [
     { label: 'Home', href: '#' },
     { label: 'Quem Somos', href: '/About' },
-    { label: 'Política', href: '#' },
+    { label: 'Política', href: '/Politics' },
     { label: 'Orçamento', href: '#' },
   ];
 

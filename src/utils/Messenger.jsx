@@ -28,15 +28,11 @@ export default function Messenger() {
 
     return (
         <div className="fixed bottom-6 right-6 z-50">
-
-            {/* POPUP */}
             {open && (
                 <div className="mb-4 w-72 rounded-2xl bg-darkGray text-white shadow-2xl p-5 border border-gray/20">
 
                     <div className="flex justify-between items-center mb-4">
-                        <h3 className="font-semibold text-lg">
-                            Contato para Orçamentos
-                        </h3>
+                        <h3 className="font-semibold text-lg">Contato para Orçamentos</h3>
 
                         <button
                             onClick={() => setOpen(false)}
@@ -64,20 +60,12 @@ export default function Messenger() {
                                 </span>
                             </Link>
                         ))}
-
                     </div>
-
                 </div>
             )}
-
-            {/* BOTÃO */}
-            <button
-                onClick={() => setOpen(!open)}
-                className="bg-green hover:scale-110 transition text-white p-4 rounded-full shadow-lg"
-            >
+            <button onClick={() => setOpen(!open)} className="bg-green hover:scale-110 transition text-white p-4 rounded-full shadow-lg">
                 <BiSolidMessageRounded size={26} />
             </button>
-
         </div>
     )
 }
