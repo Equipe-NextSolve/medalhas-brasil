@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function MedalAbout() {
     return (
-        <section className="w-full bg-zinc-950 text-white py-24 relative overflow-hidden">
+        <section className="w-full min-h-screen flex items-center bg-zinc-950 text-white py-24 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-900 to-black opacity-60"></div>
             <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 

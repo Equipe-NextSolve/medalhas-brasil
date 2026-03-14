@@ -5,7 +5,7 @@ export default function ContentPolitic() {
     return (
         <section className="relative flex items-center justify-center w-full min-h-[900px] px-6 py-20 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
 
-            <div className="absolute w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full top-[-150px] left-[-150px]"></div>
+            <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full top-[-150px] left-[-150px]"></div>
 
             <div className="relative flex flex-col lg:flex-row items-center justify-between gap-16 max-w-6xl w-full">
 
@@ -14,7 +14,7 @@ export default function ContentPolitic() {
                         Política de Privacidade e Segurança de Dados
                     </h1>
 
-                    <div className="w-40 h-1 bg-green-400 rounded mt-4 mb-6 mx-auto lg:mx-0"></div>
+                    <div className="w-40 h-1 bg-blue-400 rounded mt-4 mb-6 mx-auto lg:mx-0"></div>
 
                     <p className="text-zinc-300 leading-relaxed">
                         Prezamos pela segurança das suas informações. Nossa política de
