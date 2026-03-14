@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function ContentInitial() {
+export default function ContentPolitic() {
     return (
-        <section className="relative flex items-center justify-center w-full min-h-[600px] px-6 py-20 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+        <section className="relative flex items-center justify-center w-full min-h-[900px] px-6 py-20 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
 
             <div className="absolute w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full top-[-150px] left-[-150px]"></div>
 
@@ -26,8 +26,8 @@ export default function ContentInitial() {
                 <div className="flex justify-center w-full max-w-lg">
                     <Image
                         src="/politic.png"
-                        width={800}
-                        height={500}
+                        width={900}
+                        height={600}
                         alt="Política de Privacidade"
                         className="rounded-xl shadow-2xl object-cover"
                     />
