@@ -32,8 +32,9 @@ export default function CardsProduts() {
                                     alt={item.alt}
                                     fill
                                     className="object-cover group-hover:scale-105 transition duration-500" />
-                            </div>
 
+                            </div>
+                            <p className='text-center p-3'>medalhas#</p>
                             <div className="p-5 flex justify-center">
                                 <Link href={item.link} className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-2 rounded-lg transition duration-300">
                                     Acessar Produto
