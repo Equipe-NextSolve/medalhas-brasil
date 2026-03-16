@@ -5,7 +5,7 @@ import Messenger from '@/utils/Messenger'
 
 export default function page() {
     return (
-        <section className='w-full min-h-screen pt-15 '>
+        <section className='w-full min-h-screen pt-15 -mb-20'>
             <ContentPolitic />
             <PresentationPolitic />
             <Messenger />
