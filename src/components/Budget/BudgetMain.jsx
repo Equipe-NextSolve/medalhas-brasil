@@ -2,6 +2,7 @@ import Title from '@/utils/Title'
 import React from 'react'
 import FormBudget from './FormBudget'
 import Questions from './Questions'
+import Messenger from '@/utils/Messenger'
 import LoadingScreen from '@/utils/Loanding'
 
 export default function BudgetMain() {
@@ -12,6 +13,7 @@ export default function BudgetMain() {
                 <FormBudget />
                 <Title label="Perguntas Frequentes" />
                 <Questions />
+                <Messenger />
             </main>
         </LoadingScreen>
     )
