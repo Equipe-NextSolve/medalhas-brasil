@@ -1,5 +1,5 @@
 import React from 'react'
-import PresentationPolitic from './PresentationPolitic'
+import PresentationPolitic from '../../components/Politics/PresentationPolitic'
 import ContentPolitic from '../../components/Politics/ContentPolitic'
 import Messenger from '@/utils/Messenger'
 
