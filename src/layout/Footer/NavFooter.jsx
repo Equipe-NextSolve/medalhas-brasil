@@ -1,6 +1,8 @@
 'use client'
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import SocialButton, { socialLinks } from "./SocialLinks";
+import Link from "next/link";
+
 const classNavItems = "text-white cursor-pointer hover:text-yellow transition-all duration-300 hover:translate-x-1";
 
 export default function NavFooter() {
@@ -8,10 +10,10 @@ export default function NavFooter() {
         <nav className="flex flex-col gap-8 sm:flex-wrap sm:flex-row w-full max-w-200 px-5 justify-between">
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Institual</h2>
-                <p className={classNavItems}>Sobre nós</p>
-                <p className={classNavItems}>Política de Privacidade</p>
-                <p className={classNavItems}>Orçamentos</p>
-            </div>    
+                <Link href='/About' className={classNavItems}>Sobre nós</Link>
+                <Link href='/Politics' className={classNavItems}>Política de Privacidade</Link>
+                <Link href='/budget' className={classNavItems}>Orçamentos</Link>
+            </div>
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Onde nos Encontrar</h2>
                 <p className={classNavItems}>3403 Av. Dr. Silas Munguba</p>
@@ -19,7 +21,7 @@ export default function NavFooter() {
             </div>
             <div className="flex flex-col gap-2">
                 <h2 className="text-yellow text-xl tracking-wider">Redes Socias</h2>
-                 <div className="flex gap-3 mt-1">
+                <div className="flex gap-3 mt-1">
                     {socialLinks.map((s) => (
                         <SocialButton key={s.label} {...s} />
                     ))}

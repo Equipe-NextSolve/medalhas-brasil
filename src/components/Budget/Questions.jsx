@@ -12,7 +12,7 @@ const faqs = [
     },
     {
         question: "Quantidade Mínima de produção?",
-        answer: "Na Medalhas Brtasil a quantidade mínima é de 100 à 300 unidades, dependendo do produto, os valores mudam."
+        answer: "Na Medalhas Brasil a quantidade mínima é de 100 à 300 unidades, dependendo do produto, os valores mudam."
     },
     {
         question: "Como faço um orçamento?",
@@ -51,7 +51,7 @@ export default function Questions() {
                     </button>
 
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                        <p className="text-gray text-sm leading-relaxed">
+                        <p className="text-Darkgray text-sm leading-relaxed">
                             {faq.answer}
                         </p>
                     </div>

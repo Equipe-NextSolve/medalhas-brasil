@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export const socialLinks = [
-  { icon: FaInstagram, label: "Instagram", href: "#" },
+  { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/medalhas.brasil/" },
   { icon: FaEnvelope,  label: "Email",     href: "#" },
-  { icon: FaWhatsapp,  label: "WhatsApp",  href: "#" },
+  { icon: FaWhatsapp,  label: "WhatsApp",  href: "https://api.whatsapp.com/send/?phone=5585986990288&text&type=phone_number&app_absent=0" },
 ];
 
 export default function SocialButton({ icon: Icon, label, href }) {
