@@ -1,14 +1,10 @@
 import React from 'react'
-import PresentationPolitic from '../../components/Politics/PresentationPolitic'
-import ContentPolitic from '../../components/Politics/ContentPolitic'
-import Messenger from '@/utils/Messenger'
+import Politic from '@/components/Politics/Politic'
 
 export default function page() {
     return (
-        <section className='w-full min-h-screen pt-15 -mb-20'>
-            <ContentPolitic />
-            <PresentationPolitic />
-            <Messenger />
+        <section className=''>
+            <Politic />
         </section>
     )
 }

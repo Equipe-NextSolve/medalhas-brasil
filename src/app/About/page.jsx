@@ -1,14 +1,10 @@
 import React from 'react'
-import About from '../../components/About/About'
-import MedalAbout from '../../components/About/MedalAbout'
-import Messenger from '@/utils/Messenger'
+import About from '@/components/About/About'
 
 export default function page() {
     return (
-        <div className='w-full min-h-screen pt-10 -mb-20'>
+        <div className=''>
             <About />
-            <MedalAbout />
-            <Messenger />
         </div>
     )
 }
