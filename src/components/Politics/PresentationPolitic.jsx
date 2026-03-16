@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function PresentationPolitic() {
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden bg-gradient-to-br from-gray via-gray to-gray">
