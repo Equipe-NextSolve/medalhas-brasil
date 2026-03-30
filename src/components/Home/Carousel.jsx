@@ -23,7 +23,7 @@ export default function Carousel() {
     ]
 
     return (
-        <section className="w-full min-h-[700] pt-10">
+        <section className="w-full min-h-[700] pt-20">
 
             <div className="hidden md:block w-full h-[800px]">
                 <Swiper
@@ -64,7 +64,7 @@ export default function Carousel() {
                             <Image
                                 src={item.image}
                                 width={600}
-                                height={800}
+                                height={850}
                                 alt={item.alt}
                                 className="w-full h-auto object-cover"
                             />
