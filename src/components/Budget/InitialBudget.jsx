@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function InitialBudget() {
     return (
-        <section className="w-full min-h-[720px] flex items-center justify-center bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 px-6 py-16">
+        <section className="w-full min-h-180 flex items-center justify-center bg-linear-to-br from-yellow-400 via-amber-500 to-orange-500 px-6 py-16">
             <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
 
                 <div className="flex justify-center">
@@ -25,9 +26,9 @@ export default function InitialBudget() {
                     </p>
 
                     <div>
-                        <a href="mailto:seuemail@empresa.com" className="inline-block bg-white text-orange-600 font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-105">
+                        <Link href="#budget" className="inline-block bg-white text-orange-600 font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-105">
                             Solicitar Orçamento
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -25,7 +25,7 @@ export default function Carousel() {
     return (
         <section className="w-full min-h-[700] pt-20">
 
-            <div className="hidden md:block w-full h-[800px]">
+            <div className="hidden md:block w-full h-200">
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     slidesPerView={1}
@@ -37,7 +37,7 @@ export default function Carousel() {
                 >
                     {imgdesktop.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="relative w-full h-[800px]">
+                            <div className="relative w-full h-200">
                                 <Image
                                     src={item.image}
                                     fill

@@ -105,7 +105,7 @@ export default function FormBudget() {
     }
 
     return (
-        <div className='flex flex-col px-8 sm:px-0 gap-10 w-full max-w-200'>
+        <div className='flex flex-col px-8 sm:px-0 gap-10 w-full max-w-200'  id='budget'>
             <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
