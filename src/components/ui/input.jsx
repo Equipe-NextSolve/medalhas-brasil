@@ -10,8 +10,8 @@ function Input({ className, type, ...props }) {
         data-slot="input"
         className={cn(
           "peer w-full min-w-0 outline-none",
-          "h-10 rounded-t-md px-3 pt-4 pb-1",
-          "text-sm font-medium text-black placeholder:text-transparent",
+          "h-11 rounded-t-md px-3 pt-4 pb-1",
+          "text-base font-medium text-black placeholder:text-transparent",
           "bg-white border-0 border-b-2 border-gray/40",
           "transition-all duration-200 ease-in-out",
           "focus:border-yellow",
@@ -22,7 +22,7 @@ function Input({ className, type, ...props }) {
         {...props}
       />
       {/* Animated bottom border */}
-      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow transition-all duration-300 peer-focus:w-full" />
+      <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow transition-all duration-300 peer-focus:w-full" />
     </div>
   )
 }

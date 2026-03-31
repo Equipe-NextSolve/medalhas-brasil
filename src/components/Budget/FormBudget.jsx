@@ -105,7 +105,7 @@ export default function FormBudget() {
     }
 
     return (
-        <div className='flex flex-col px-8 sm:px-0 gap-10 w-full max-w-200'  id='budget'>
+        <div className='flex flex-col px-8 sm:px-0 gap-10 w-full max-w-250'  id='budget'>
             <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -115,10 +115,10 @@ export default function FormBudget() {
                 Preencha os campos abaixo
             </motion.h2>
 
-            <form className='flex flex-col gap-7' onSubmit={handleSubmit}>
+            <form className='flex flex-col  gap-7' onSubmit={handleSubmit}>
 
                 <AnimatedField index={0}>
-                    <div className='flex flex-col sm:flex-row w-full gap-10'>
+                    <div className='flex flex-col sm:flex-row w-full gap-10  '>
                         <div className="space-y-1 w-full">
                             <Label htmlFor="nome">Nome</Label>
                             <Input id="nome" name="nome" placeholder="Seu nome completo" value={formData.nome} onChange={handleChange} />
@@ -189,9 +189,9 @@ export default function FormBudget() {
                         <Button
                             type="submit"
                             className="
-                                px-8 py-2 cursor-pointer rounded-md
+                                px-8 py-5 cursor-pointer rounded-md
                                 bg-linear-to-r from-yellow-600 via-yellow-500 to-amber-400
-                                text-black font-bold tracking-wide text-[12px] sm:text-sm
+                                text-black font-bold tracking-wide text-[14px] sm:text-lg
                                 shadow-[0_4px_20px_rgba(217,153,35,0.35)]
                                 hover:shadow-[0_6px_28px_rgba(217,153,35,0.55)]
                                 hover:brightness-110 hover:-translate-y-0.5
