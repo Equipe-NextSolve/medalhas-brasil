@@ -9,7 +9,7 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/sobre`,
+      url: `${baseUrl}/About`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
