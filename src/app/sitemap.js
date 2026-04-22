@@ -1,6 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.medalhasbrasil.com' // Coloquei o seu domínio aqui
-
+  const baseUrl = 'https://www.medalhasbrasil.com' 
   return [
     {
       url: `${baseUrl}`,
