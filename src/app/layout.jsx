@@ -6,8 +6,8 @@ import { Icon } from "lucide-react";
 export const metadata = {
   title: "Medalhas Brasil - Site Oficial",
   description: "Site de Medalhas, Trofeús, e acessórios comemorativos para Eventos, campeonatos e premiações.",
-  icon: {
-    Icon: '/logo.png'
+  icons: {
+    icon: '/logo2.png'
   }
 };
 
