@@ -14,12 +14,10 @@ export default function SideBar() {
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
-  // Fecha ao mudar rota
   useEffect(() => {
     closeMenu();
   }, [pathname]);
 
-  // Travar scroll
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
@@ -27,7 +25,6 @@ export default function SideBar() {
     };
   }, [isOpen]);
 
-  // Clique fora (extra segurança)
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
