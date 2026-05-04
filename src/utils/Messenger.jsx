@@ -25,7 +25,7 @@ export default function Messenger() {
     }, [open])
 
     return (
-        <div className="fixed bottom-6 right-6 z-999 flex flex-col items-end" ref={boxRef}>
+        <div className="fixed bottom-6 right-6 z-985 flex flex-col items-end" ref={boxRef}>
             <div className={`
                     transition-all duration-300 ease-in-out transform
                     ${open ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4 pointer-events-none'}
