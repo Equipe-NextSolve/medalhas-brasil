@@ -35,15 +35,15 @@ export default function SideBar() {
 
   const mainLinks = [
     { label: "Home", href: "/" },
-    { label: "Eventos", href: "/eventos" },
-    { label: "Sobre nós", href: "/sobre" },
-    { label: "Catálogo", href: "/catalogo" },
+    { label: "Eventos", href: "#events" },
+    { label: "Sobre nós", href: "#about" },
+    { label: "Catálogo", href: "#catalogo" },
   ];
 
   const subLinks = [
-    { label: "Política de Privacidade", href: "/politica" },
-    { label: "Termos de Uso", href: "/termos" },
-    { label: "FAQ", href: "/faq" },
+    { label: "Sobre a Empresa", href: "/About" },
+    { label: "Política de Privacidade", href: "/Politics" },
+    { label: "Orçamento", href: "/budget" },
   ];
 
   return (
