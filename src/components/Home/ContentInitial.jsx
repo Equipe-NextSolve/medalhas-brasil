@@ -41,7 +41,7 @@ export default function ContentInitial() {
     ]
 
     return (
-        <section className='relative w-full min-h-screen py-16 overflow-hidden bg-linear-to-br from-darkGray via-[#262626] to-[#1a1a1a]'>
+        <section className='relative w-full min-h-screen py-16 overflow-hidden bg-linear-to-br from-darkGray via-[#262626] to-[#1a1a1a]' id='events'>
 
             <div className="absolute top-0 left-0 w-25 h-25 bg-gray/10 blur-[60px] rounded-full"></div>
             <div className="absolute bottom-0 right-0 w-25 h-25 bg-white/5 blur-[60px] rounded-full"></div>

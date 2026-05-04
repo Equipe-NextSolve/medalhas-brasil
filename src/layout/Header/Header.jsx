@@ -9,19 +9,13 @@ export default function Header() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const checkScreen = () => {
-            setIsMobile(window.innerWidth <= 748);
-        };
-
+        const checkScreen = () => setIsMobile(window.innerWidth <= 748);
         checkScreen();
 
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
+        const handleScroll = () => setScrolled(window.scrollY > 20);
 
         window.addEventListener("scroll", handleScroll, { passive: true });
         window.addEventListener("resize", checkScreen);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", checkScreen);
@@ -29,16 +23,22 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`flex fixed top-0 w-full h-20 z-50 transition-all duration-300 bg-[#f0f0f0] ${scrolled ? "shadow-sm" : ""}`}style={{backgroundImage: `radial-gradient(ellipse 100% 80% at 50% -20%, rgba(191,191,191,0.15) 0%, transparent 70%)`,}}>
+        <header
+            className={`fixed top-0 w-full z-50 transition-all duration-500 border-b 
+            ${scrolled
+                    ? "h-16 bg-white/80 backdrop-blur-md border-gray/20 shadow-md"
+                    : "h-24 bg-white border-transparent"}`}>
+            <div className="absolute inset-0 pointer-events-none opacity-40" style={{ background: 'linear-gradient(to bottom, rgba(191,191,191,0.08), transparent)' }}/>
 
-            <section className="max-w-7xl mx-auto flex items-center justify-around h-full py-10 px-10 w-full">
-                <Logo />
+            <section className="relative max-w-7xl mx-auto flex items-center justify-between h-full px-6 lg:px-12">
 
-                <div className="max-[748px]:hidden">
-                    <Navigation />
-                </div>
+                <div className="shrink-0 hover:scale-105 transition-transform duration-300"><Logo /></div>
 
-                {isMobile && <SideBar />}
+                <div className="hidden md:flex items-center"><Navigation /></div>
+
+                {isMobile && (
+                    <div className="p-2 rounded-lg bbg-gray/10 hover:bg-gray/20 transition-colors"><SideBar /></div>
+                )}
             </section>
         </header>
     );
