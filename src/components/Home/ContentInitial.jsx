@@ -41,10 +41,10 @@ export default function ContentInitial() {
     ]
 
     return (
-        <section className='relative w-full min-h-[80vh] py-16 overflow-hidden bg-linear-to-br from-darkGray via-[#262626] to-[#1a1a1a]'>
+        <section className='relative w-full min-h-screen py-16 overflow-hidden bg-linear-to-br from-darkGray via-[#262626] to-[#1a1a1a]'>
 
-            <div className="absolute top-0 left-0 w-100px h-100 bg-gray/10 blur-[60px] rounded-full"></div>
-            <div className="absolute bottom-0 right-0 w-100 h-100 bg-white/5 blur-[60px] rounded-full"></div>
+            <div className="absolute top-0 left-0 w-25 h-25 bg-gray/10 blur-[60px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-25 h-25 bg-white/5 blur-[60px] rounded-full"></div>
 
             <motion.div
                 className="max-w-3xl mx-auto"
@@ -54,9 +54,7 @@ export default function ContentInitial() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-center text-3xl py-9 text-white">
-                    Medalhas Brasil, Medalhas e troféus de alta qualidade para todos os tipos de premiações e eventos.
-                </h2>
+                <h2 className="text-center text-3xl py-9 text-white"> Medalhas Brasil, Medalhas e troféus de alta qualidade para todos os tipos de premiações e eventos.</h2>
             </motion.div>
 
             <motion.div
@@ -68,31 +66,22 @@ export default function ContentInitial() {
             >
 
                 {dtImage.map((itemData) => (
-                    <motion.div
-                        key={itemData.id}
-                        className="flex flex-col items-center"
-                        variants={item}
-                        transition={{ duration: 0.5 }}
-                    >
+                    <motion.div key={itemData.id} className="flex flex-col items-center" variants={item} transition={{ duration: 0.5 }}>
+                        <div className="relative w-full aspect-3/4 max-w-87.5 overflow-hidden rounded-xl shadow-lg">
+                            <Image
+                                src={itemData.image}
+                                alt={itemData.alt}
+                                fill
+                                sizes="(max-width: 768px) 90vw, 350px"
+                                className="object-cover"
+                            />
+                        </div>
 
-                        <Image
-                            src={itemData.image}
-                            alt={itemData.alt}
-                            width={350}
-                            height={500}
-                            sizes="(max-width: 768px) 90vw, 350px"
-                            className="rounded-xl object-cover shadow-lg"
-                        />
-
-                        <p className="text-white text-center mt-4 uppercase tracking-wider text-sm">
-                            {itemData.text}
-                        </p>
+                        <p className="text-white text-center mt-4 uppercase tracking-wider text-sm">{itemData.text}</p>
 
                     </motion.div>
                 ))}
-
             </motion.div>
-
         </section>
     )
 }
