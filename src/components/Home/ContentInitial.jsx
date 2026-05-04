@@ -28,24 +28,23 @@ export default function ContentInitial() {
         },
         {
             id: 2,
-            image: '/ilustrative2.png',
-            text: 'CURSO DE APERFEIÇOAMENTO DE OFICIAIS 2019',
+            image: '/image21.jpeg',
+            text: 'CIRCUITO DO PACOTI - 2026',
             alt: 'image-ilustrative'
         },
         {
             id: 3,
-            image: '/ilustrative3.png',
-            text: 'MARATONA RIOCITY 2024',
+            image: '/image22.jpeg',
+            text: 'CORRIDA VENUS 2026',
             alt: 'image-ilustrative'
         },
     ]
 
     return (
-        <section className='relative w-full min-h-[80vh] py-16 overflow-hidden bg-gradient-to-br from-[#222222] via-[#262626] to-[#1a1a1a]'>
+        <section className='relative w-full min-h-[80vh] py-16 overflow-hidden bg-linear-to-br from-darkGray via-[#262626] to-[#1a1a1a]'>
 
-            {/* blur reduzido (mais leve no mobile) */}
-            <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#BFBFBF]/10 blur-[60px] rounded-full"></div>
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#f0f0f0]/5 blur-[60px] rounded-full"></div>
+            <div className="absolute top-0 left-0 w-100px h-100 bg-gray/10 blur-[60px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-100 h-100 bg-white/5 blur-[60px] rounded-full"></div>
 
             <motion.div
                 className="max-w-3xl mx-auto"

@@ -17,10 +17,10 @@ export default function ContentEvent() {
     };
 
     return (
-        <section className="relative w-full py-20 bg-gradient-to-br from-[#f0f0f0] via-[#e9e9e9] to-[#BFBFBF] overflow-hidden" id="about">
+        <section className="relative w-full py-20 bg-linear-to-br from-white via-[#e9e9e9] to-gray overflow-hidden" id="about">
 
-            <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/40 blur-[120px] rounded-full"></div>
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#BFBFBF]/30 blur-[120px] rounded-full"></div>
+            <div className="absolute top-0 left-0 w-100 h-100 bg-white/40 blur-[120px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-100 h-100 bg-gray/30 blur-[120px] rounded-full"></div>
 
             <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
