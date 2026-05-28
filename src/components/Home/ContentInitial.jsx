@@ -23,7 +23,7 @@ export default function ContentInitial() {
         {
             id: 1,
             image: '/ilustrative1.png',
-            text: 'CANIDE-CE 2026',
+            text: 'CANINDÉ-CE 2026',
             alt: 'image-ilustrative'
         },
         {
@@ -76,9 +76,7 @@ export default function ContentInitial() {
                                 className="object-cover"
                             />
                         </div>
-
                         <p className="text-white text-center mt-4 uppercase tracking-wider text-sm">{itemData.text}</p>
-
                     </motion.div>
                 ))}
             </motion.div>
