@@ -201,7 +201,7 @@ export default function Sidebar() {
                   <div className="h-px w-3/4 bg-linear-to-r from-transparent via-yellow/40 to-transparent mb-3" />
 
                   <span className="text-xs font-bold tracking-widest text-transparent bg-clip-text bg-linear-to-r from-yellow to-blue">
-                    Task Manager
+                    Medalhas Brasil
                   </span>
                 </div>
               </div>
