@@ -1,7 +1,6 @@
 export default function PresentationPolitic() {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden bg-gradient-to-br from-gray via-gray to-gray">
-            <div className="absolute w-[500px] h-[500px] bg-blue/20 blur-[140px] rounded-full top-[-200px] right-[-200px]"></div>
+        <section className="relative w-full min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden bg-linear-to-br bg-white">
             <div className="relative flex flex-col lg:flex-row max-w-6xl w-full rounded-2xl overflow-hidden shadow-2xl">
 
                 <div className="lg:w-1/3 bg-darkGray flex items-center justify-center p-10">
