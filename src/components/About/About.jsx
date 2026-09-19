@@ -1,8 +1,7 @@
-import React from 'react'
+import Messenger from '@/layout/ChatBot/Messenger'
+import LoadingScreen from '@/layout/Loanding/Loanding'
 import InitialAbout from './InitialAbout'
 import MedalAbout from './MedalAbout'
-import Messenger from '@/utils/Messenger'
-import LoadingScreen from '@/utils/Loanding'
 
 export default function About() {
     return (

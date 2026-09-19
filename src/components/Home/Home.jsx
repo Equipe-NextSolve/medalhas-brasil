@@ -1,13 +1,12 @@
 'use client'
-import React from "react";
-import Carousel from "./Carousel";
-import ContentInitial from "./ContentInitial";
-import ContentEvent from "./ContentEvent";
-import CardsProduts from "./CardsProduts";
-import Title from '@/utils/Title'
+import Messenger from "@/layout/ChatBot/Messenger";
+import LoadingScreen from "@/layout/Loanding/Loanding";
+import Title from '@/utils/Title';
 import Questions from "../Budget/Questions";
-import Messenger from "@/utils/Messenger";
-import LoadingScreen from "@/utils/Loanding";
+import CardsProduts from "./CardsProduts";
+import Carousel from "./Carousel";
+import ContentEvent from "./ContentEvent";
+import ContentInitial from "./ContentInitial";
 
 export default function HomeMain() {
   return (

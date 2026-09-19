@@ -1,7 +1,7 @@
 import "./globals.css";
 import Header from "@/layout/Header/Header";
 import Footer from "@/layout/Footer/Footer";
-import { Icon } from "lucide-react";
+
 
 export const metadata = {
   title: "Medalhas Personalizadas e Troféus | Fabricação e Venda no Brasil",

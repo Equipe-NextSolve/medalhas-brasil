@@ -1,15 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
-import Navigation from "./Navigation";
-import SideBar from "./SideBar";
+
+import Logo from "./Sections/Logo/Logo";
+import SearchBar from "./Sections/SearchBar/SearchBar";
+import Buttons from "./Sections/Buttons/Buttons";
+import Sidebar from "./Sections/SideBar/SideBar";
+import Navigation from "./Sections/Navigation/Navigation";
+import Departament from "./Sections/Departament/Departament";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const checkScreen = () => setIsMobile(window.innerWidth <= 748);
+        const checkScreen = () => setIsMobile(window.innerWidth <= 768);
         checkScreen();
 
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -23,23 +27,45 @@ export default function Header() {
     }, []);
 
     return (
-        <header
-            className={`fixed top-0 w-full z-50 transition-all duration-500 border-b 
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b flex flex-col justify-center
             ${scrolled
-                    ? "h-16 bg-white/80 backdrop-blur-md border-gray/20 shadow-md"
-                    : "h-24 bg-white border-transparent"}`}>
-            <div className="absolute inset-0 pointer-events-none opacity-40" style={{ background: 'linear-gradient(to bottom, rgba(191,191,191,0.08), transparent)' }}/>
+                    ? "bg-white/95 backdrop-blur-md border-black/5 shadow-sm py-2"
+                    : "bg-white border-transparent py-4 md:py-5"
+                }`}>
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-3 md:gap-4">
 
-            <section className="relative max-w-7xl mx-auto flex items-center justify-between h-full px-6 lg:px-12">
+                <div className="flex items-center justify-between gap-4 md:gap-8">
+                    <div className="shrink-0"><Logo /></div>
 
-                <div className="shrink-0 hover:scale-105 transition-transform duration-300"><Logo /></div>
+                    {!isMobile && (
+                        <div className="flex-1 max-w-xl mx-auto w-full"><SearchBar /></div>
+                    )}
 
-                <div className="hidden md:flex items-center"><Navigation /></div>
+                    {!isMobile ? (
+                        <div className="shrink-0">
+                            <Buttons />
+                        </div>
+                    ) : (
+                        <div className="flex items-center">
+                            <Sidebar />
+                        </div>
+                    )}
+                </div>
 
-                {isMobile && (
-                    <div className="p-2 rounded-lg bbg-gray/10 hover:bg-gray/20 transition-colors"><SideBar /></div>
+                {!isMobile ? (
+                    <div className={`flex items-center justify-between border-t border-black/5 pt-3 transition-all duration-300 ${scrolled ? "hidden" : "flex"}`}>
+                        <div className="flex items-center gap-6">
+                            <Departament />
+                            <div className="h-4 w-px bg-black/10" />
+                            <Navigation />
+                        </div>
+                    </div>
+                ) : (
+                    <div className="w-full">
+                        <SearchBar />
+                    </div>
                 )}
-            </section>
+            </div>
         </header>
     );
 }

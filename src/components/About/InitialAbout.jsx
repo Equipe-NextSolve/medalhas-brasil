@@ -33,7 +33,7 @@ export default function InitialAbout() {
                         Marlon Ferrari
                     </h1>
 
-                    <div className="w-20 h-[3px] bg-blue-600 mt-2 mb-6"></div>
+                    <div className="w-20 h-0.75 bg-blue-600 mt-2 mb-6"></div>
 
                     <p className="text-gray-700 leading-relaxed space-y-4">
                         Muito prazer, meu nome é Marlon Alessandro Ferrari. Sou empresário há mais de 30 anos no segmento de acessórios, sempre buscando inovação e qualidade em cada projeto que desenvolvo.
