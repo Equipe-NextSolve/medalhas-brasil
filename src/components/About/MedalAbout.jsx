@@ -103,12 +103,12 @@ export default function MedalAbout() {
                         </motion.div>
 
                         {/* Bloco Diferencial 2 */}
-                        <motion.div variants={itemGrid} className="bg-white border border-[#BFBFBF]/30 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300">
-                            <div className="w-10 h-10 rounded-xl bg-[#038C4C]/10 flex items-center justify-center text-[#038C4C] font-bold text-base mb-4">
+                        <motion.div variants={itemGrid} className="bg-white border border-gray/30 p-6 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300">
+                            <div className="w-10 h-10 rounded-xl bg-green/10 flex items-center justify-center text-green font-bold text-base mb-4">
                                 ✓
                             </div>
-                            <h3 className="text-lg font-bold text-[#0D0D0D] mb-1">Materiais Premium</h3>
-                            <p className="text-[#222222]/80 text-sm leading-relaxed">
+                            <h3 className="text-lg font-bold text-black mb-1">Materiais Premium</h3>
+                            <p className="text-darkGray/80 text-sm leading-relaxed">
                                 Acabamento impecável, durabilidade garantida e corte de alta precisão técnica em cada troféu.
                             </p>
                         </motion.div>
