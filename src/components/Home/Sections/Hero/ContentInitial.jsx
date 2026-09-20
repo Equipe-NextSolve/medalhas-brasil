@@ -28,9 +28,9 @@ const events = [
         alt: "Premiação da Corrida Vênus",
     },
     {
-        id: "evento-esportivo-2026",
-        image: "/images/image22.jpeg",
-        title: "Evento Esportivo 2026",
+        id: "Primeiro Team Run",
+        image: "/images/ilustrative5.png",
+        title: "Primeiro Team Run",
         category: "Evento",
         alt: "Premiação de evento esportivo",
     },
@@ -38,28 +38,17 @@ const events = [
 
 const container = {
     hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.12,
-        },
-    },
+    visible: { transition: { staggerChildren: 0.12, }, },
 };
 
 const item = {
-    hidden: {
-        opacity: 0,
-        y: 35,
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-    },
+    hidden: { opacity: 0, y: 35, },
+    visible: { opacity: 1, y: 0, },
 };
 
 export default function Hero() {
     return (
         <section id="events" className="relative w-full overflow-hidden bg-white py-20 md:py-24 lg:py-28">
-
             <div className="pointer-events-none absolute -right-32 top-10 h-80 w-80 rounded-full bg-yellow/5 blur-3xl" />
 
             <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -152,7 +141,6 @@ export default function Hero() {
                         </motion.article>
                     ))}
                 </motion.div>
-
             </div>
         </section>
     );

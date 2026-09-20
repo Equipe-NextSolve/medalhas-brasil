@@ -1,12 +1,11 @@
-import Link from 'next/link'
+import { getProductById, products } from '@/data/productsMedal'
 import Image from 'next/image'
-import { getProductById, products } from '@/data/products'
-import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 export async function generateMetadata({ params }) {
   const { id } = await params
   const product = getProductById(id)
-  
+
   if (!product) {
     return {
       title: 'Produto não encontrado',
@@ -72,7 +71,7 @@ export default async function ProdutoDetalhePage({ params }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Imagem do Produto */}
           <div className="flex items-center justify-center bg-white rounded-xl shadow-md p-8">
-            <div className="relative w-full h-[400px] rounded-xl overflow-hidden group">
+            <div className="relative w-full h-100 rounded-xl overflow-hidden group">
               <Image
                 src={product.image}
                 alt={product.alt}

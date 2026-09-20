@@ -5,7 +5,7 @@ import { ArrowRight, Eye, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { products } from "@/data/productsMedal";
+import { products } from "@/data/productsTrophy";
 
 const container = {
     hidden: {},
@@ -17,39 +17,42 @@ const item = {
     visible: { opacity: 1, y: 0, },
 };
 
-export default function CardsMedal() {
-    const featuredProducts = products.slice(0, 6);
+export default function CardsTrophy() {
+    const trophyProducts = products.slice(0, 6);
 
     return (
-        <section id="catalogo" className="w-full bg-white py-20 md:py-24 lg:py-28">
+        <section id="trofeus" className="w-full bg-gray/20 py-20 md:py-24 lg:py-28">
             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 <div className="mb-12 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
+
                         <div className="mb-3 flex items-center gap-3">
                             <span className="h-px w-8 bg-yellow" />
 
-                            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow">
-                                Produtos em destaque
-                            </span>
+                            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow">Coleção de troféus</span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold tracking-tight text-black md:text-4xl">
-                            Premiações feitas para{" "}
+                        <h2 className="text-3xl font-semibold leading-tight tracking-tight text-black md:text-4xl">
+                            Troféus para transformar resultados em{" "}
                             <span className="text-yellow">
-                                grandes conquistas.
+                                reconhecimento.
                             </span>
                         </h2>
 
                         <p className="mt-4 max-w-xl text-sm font-medium leading-7 text-darkGray md:text-base">
-                            Conheça alguns dos nossos troféus, medalhas e produtos desenvolvidos para tornar cada conquista ainda mais especial.
+                            Explore modelos desenvolvidos para campeonatos, eventos corporativos e diferentes tipos de premiação.
                         </p>
                     </div>
 
-                    <Link href="/produtos" className="group flex w-fit items-center gap-2 text-sm font-semibold text-black transition-colors duration-300 hover:text-yellow">
-                        Ver todos os produtos
+                    <Link href="/produtos/trofeus" className="group flex w-fit items-center gap-2 text-sm font-semibold text-black transition-colors duration-300 hover:text-yellow">
+                        Explorar todos os troféus
 
-                        <ArrowRight size={17} className="transition-transform duration-300 group-hover:translate-x-1" />
+                        <ArrowRight
+                            size={17}
+                            strokeWidth={1.8}
+                            className="transition-transform duration-300 group-hover:translate-x-1"
+                        />
                     </Link>
                 </div>
 
@@ -58,17 +61,14 @@ export default function CardsMedal() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
-                    className="grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
-                >
-                    {featuredProducts.map((product) => (
+                    className="grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+                    {trophyProducts.map((product) => (
                         <motion.article
                             key={product.id}
                             variants={item}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-                            className="group"
-                        >
-
-                            <div className="relative overflow-hidden rounded-2xl bg-gray/20">
+                            className="group">
+                            <div className="relative overflow-hidden rounded-2xl bg-white">
                                 <Link href={`/products/${product.id}`} className="relative block aspect-4/4.5 w-full overflow-hidden">
                                     <Image
                                         src={product.image}
@@ -87,10 +87,9 @@ export default function CardsMedal() {
                                     )}
 
                                     <div className="absolute bottom-4 left-1/2 hidden -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block">
-                                        <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-black shadow-lg">
-                                            <Eye size={15} />
-
-                                            Ver produto
+                                        <div className="flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-black shadow-lg">
+                                            <Eye size={15} strokeWidth={1.8} />
+                                            Ver detalhes
                                         </div>
                                     </div>
                                 </Link>
@@ -125,9 +124,15 @@ export default function CardsMedal() {
                                                 </span>
                                             </>
                                         ) : (
-                                            <span className="text-sm font-semibold text-darkGray">
-                                                Consulte o valor
-                                            </span>
+                                            <>
+                                                <span className="block text-xs font-medium text-darkGray">
+                                                    Valor sob consulta
+                                                </span>
+
+                                                <span className="mt-0.5 block text-sm font-semibold text-black">
+                                                    Solicite um orçamento
+                                                </span>
+                                            </>
                                         )}
                                     </div>
 
@@ -143,7 +148,6 @@ export default function CardsMedal() {
                         </motion.article>
                     ))}
                 </motion.div>
-
             </div>
         </section>
     );

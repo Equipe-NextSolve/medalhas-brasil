@@ -10,7 +10,7 @@ import Title from '@/utils/Title';
 import Questions from "../Budget/Questions";
 import CardsMedal from "./Sections/Cards/CardsMedal";
 import ContentEvent from "./Sections/ContentEvent";
-
+import CardsTrophy from "./Sections/Cards/CardsTrophy";
 
 export default function HomeMain() {
   return (
@@ -21,10 +21,8 @@ export default function HomeMain() {
         <Hero />
         <CardsMedal />
         <ContentEvent />
-        <div className="py-30 flex items-center justify-center">
-          <Title label="Perguntas Frequentes" />
-        </div>
-        <Questions />
+        <CardsTrophy  />
+     
         <Messenger />
       </main>
     </LoadingScreen>
