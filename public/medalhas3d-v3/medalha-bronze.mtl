@@ -1,0 +1,12 @@
+newmtl frente
+Kd 1 1 1
+map_Kd textura-bronze.png
+
+newmtl metal
+Kd 0.65 0.32 0.13
+Ns 80
+
+newmtl fita
+Kd 0.086 0.152 0.260
+Ks 0 0 0
+Ns 2

@@ -1,0 +1,10 @@
+VERSÃO 4: corrigida contaminação azul na argola. Todas as faces da argola usam apenas o material metálico correspondente.
+
+MEDALHAS 3D — VERSÃO 3
+Três medalhas em GLB com textura incorporada, e OBJ/MTL/PNG.
+Blender: Arquivo > Importar > glTF 2.0. Use visualização de materiais.
+Para OBJ, mantenha os arquivos MTL e PNG na mesma pasta.
+
+Alterações: duas voltas curvas de fita com espessura, textura nos dois lados e maior altura. Verso da medalha com a arte frontal reaplicada e relevo suave. Metal na argola e bordas.
+O verso é uma adaptação artística usando a frente, não uma reprodução do verso real, que não foi fotografado. Geometria aproximada para visualização, com detalhes finos principalmente na textura. Sombras da foto permanecem na textura. Não destinado à fabricação.
+Unidades: metros, largura aproximada de 10 cm, frente +Z e cima +Y.

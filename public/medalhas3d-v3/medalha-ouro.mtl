@@ -1,0 +1,12 @@
+newmtl frente
+Kd 1 1 1
+map_Kd textura-ouro.png
+
+newmtl metal
+Kd 0.85 0.57 0.16
+Ns 80
+
+newmtl fita
+Kd 0.086 0.152 0.260
+Ks 0 0 0
+Ns 2

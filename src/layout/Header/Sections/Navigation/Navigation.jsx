@@ -67,6 +67,12 @@ const navigationLinks = [
         href: "/ofertas",
         highlight: true,
     },
+    {
+        id: "modelo-3d",
+        label: "Modelo 3D",
+        href: "/visualizador3d",
+        badge: true,
+    },
 ];
 
 export default function Navigation() {
@@ -93,6 +99,14 @@ export default function Navigation() {
                                     </div>
                                 </div>
                             </>
+                        ) : link.badge ? (
+                            <Link href={link.href} className="flex items-center gap-1.5 rounded-full bg-black px-4 py-1.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-yellow hover:text-black">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-yellow opacity-75" />
+                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-yellow" />
+                                </span>
+                                {link.label}
+                            </Link>
                         ) : (
                             <Link href={link.href} className={`relative py-2 text-sm font-medium transition-colors duration-200 ${link.highlight ? "text-yellow hover:text-black" : "text-darkGray hover:text-yellow"}`}>
                                 {link.label}
