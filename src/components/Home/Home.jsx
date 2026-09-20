@@ -5,12 +5,10 @@ import LoadingScreen from "@/layout/Loanding/Loanding";
 import Carousel from "./Sections/Carousel/Carousel";
 import BenefitsBar from "./Sections/BenefitsBar/BenefitsBar";
 import Hero from "./Sections/Hero/ContentInitial";
-
-import Title from '@/utils/Title';
-import Questions from "../Budget/Questions";
 import CardsMedal from "./Sections/Cards/CardsMedal";
-import ContentEvent from "./Sections/ContentEvent";
+import ContentEvent from "./Sections/Event/ContentEvent";
 import CardsTrophy from "./Sections/Cards/CardsTrophy";
+import CTA from "./Sections/CTA/CTA";
 
 export default function HomeMain() {
   return (
@@ -22,7 +20,7 @@ export default function HomeMain() {
         <CardsMedal />
         <ContentEvent />
         <CardsTrophy  />
-     
+        <CTA  />
         <Messenger />
       </main>
     </LoadingScreen>
