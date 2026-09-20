@@ -10,61 +10,55 @@ import Departament from "./Sections/Departament/Departament";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const checkScreen = () => setIsMobile(window.innerWidth <= 768);
-        checkScreen();
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
 
-        const handleScroll = () => setScrolled(window.scrollY > 20);
+        handleScroll();
 
         window.addEventListener("scroll", handleScroll, { passive: true });
-        window.addEventListener("resize", checkScreen);
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", checkScreen);
         };
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b flex flex-col justify-center
-            ${scrolled
-                    ? "bg-white/95 backdrop-blur-md border-black/5 shadow-sm py-2"
-                    : "bg-white border-transparent py-4 md:py-5"
-                }`}>
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-3 md:gap-4">
+        <header className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${scrolled ? "border-gray/30 bg-white/95 shadow-sm backdrop-blur-md" : "border-gray/20 bg-white"}`}>
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
-                <div className="flex items-center justify-between gap-4 md:gap-8">
-                    <div className="shrink-0"><Logo /></div>
-
-                    {!isMobile && (
-                        <div className="flex-1 max-w-xl mx-auto w-full"><SearchBar /></div>
-                    )}
-
-                    {!isMobile ? (
-                        <div className="shrink-0">
-                            <Buttons />
-                        </div>
-                    ) : (
-                        <div className="flex items-center">
-                            <Sidebar />
-                        </div>
-                    )}
-                </div>
-
-                {!isMobile ? (
-                    <div className={`flex items-center justify-between border-t border-black/5 pt-3 transition-all duration-300 ${scrolled ? "hidden" : "flex"}`}>
-                        <div className="flex items-center gap-6">
-                            <Departament />
-                            <div className="h-4 w-px bg-black/10" />
-                            <Navigation />
-                        </div>
+                <div className="flex h-25 items-center justify-between gap-4 md:gap-7">
+                    <div className="shrink-0">
+                        <Logo />
                     </div>
-                ) : (
-                    <div className="w-full">
+
+                    <div className="mx-auto hidden w-full max-w-2xl flex-1 md:block">
                         <SearchBar />
                     </div>
-                )}
+
+                    <div className="hidden shrink-0 md:block">
+                        <Buttons />
+                    </div>
+
+                    <div className="flex shrink-0 items-center md:hidden">
+                        <Sidebar />
+                    </div>
+                </div>
+
+                <div className="pb-4 md:hidden">
+                    <SearchBar />
+                </div>
+
+                <div className="hidden h-13.5 items-center border-t border-gray/30 md:flex">
+                    <div className="flex w-full items-center gap-5">
+                        <Departament />
+
+                        <div className="h-5 w-px shrink-0 bg-gray/50" />
+                        <Navigation />
+                    </div>
+                </div>
             </div>
         </header>
     );
