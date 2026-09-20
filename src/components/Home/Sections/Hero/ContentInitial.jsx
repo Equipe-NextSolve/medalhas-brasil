@@ -8,28 +8,28 @@ import { ArrowUpRight, CalendarDays } from "lucide-react";
 const events = [
     {
         id: "caninde-2026",
-        image: "/ilustrative1.png",
+        image: "/images/ilustrative1.png",
         title: "Canindé-CE 2026",
         category: "Corrida",
         alt: "Premiação do evento em Canindé",
     },
     {
         id: "circuito-pacoti-2026",
-        image: "/image21.jpeg",
+        image: "/images/image21.jpeg",
         title: "Circuito do Pacoti - 2026",
         category: "Circuito",
         alt: "Premiação do Circuito do Pacoti",
     },
     {
         id: "corrida-venus-2026",
-        image: "/image22.jpeg",
+        image: "/images/image22.jpeg",
         title: "Corrida Vênus 2026",
         category: "Corrida",
         alt: "Premiação da Corrida Vênus",
     },
     {
         id: "evento-esportivo-2026",
-        image: "/image22.jpeg",
+        image: "/images/image22.jpeg",
         title: "Evento Esportivo 2026",
         category: "Evento",
         alt: "Premiação de evento esportivo",

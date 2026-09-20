@@ -5,7 +5,7 @@ export const products = [
   {
     id: 1,
     name: "Medalha Bronze",
-    image: "/medalbronze.png",
+    image: "/products/medalbronze.png",
     alt: "Medalha Bronze",
     price: "R$ 15,00",
     description: "Medalha de bronze de alta qualidade, perfeita para competições e eventos.",
@@ -21,7 +21,7 @@ export const products = [
   {
     id: 2,
     name: "Medalha Prata",
-    image: "/medaliron.png",
+    image: "/products/medaliron.png",
     alt: "Medalha Prata",
     price: "R$ 25,00",
     description: "Medalha de prata com acabamento espelhado, elegante e sofisticada.",
@@ -37,7 +37,7 @@ export const products = [
   {
     id: 3,
     name: "Medalha Ouro",
-    image: "/medalgold.png",
+    image: "/products/medalgold.png",
     alt: "Medalha Ouro",
     price: "R$ 35,00",
     description: "Medalha de ouro, o topo da linha para as melhores premiações.",
@@ -53,7 +53,7 @@ export const products = [
   {
     id: 4,
     name: "Medalha Bronze Personalizada",
-    image: "/medalbronze.png",
+    image: "/products/medalbronze.png",
     alt: "Medalha Bronze Personalizada",
     price: "R$ 20,00",
     description: "Medalha de bronze com personalização de nome e data.",
@@ -70,7 +70,7 @@ export const products = [
   {
     id: 5,
     name: "Medalha Prata Personalizada",
-    image: "/medaliron.png",
+    image: "/products/medaliron.png",
     alt: "Medalha Prata Personalizada",
     price: "R$ 30,00",
     description: "Medalha de prata com gravação personalizada.",
@@ -87,7 +87,7 @@ export const products = [
   {
     id: 6,
     name: "Medalha Ouro Personalizada",
-    image: "/medalgold.png",
+    image: "/products/medalgold.png",
     alt: "Medalha Ouro Personalizada",
     price: "R$ 40,00",
     description: "Medalha de ouro com gravação personalizada premium.",
