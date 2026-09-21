@@ -28,12 +28,17 @@ const desktopImages = [
 const mobileImages = [
     {
         id: "carousel-mobile-01",
-        image: "/mobile1.png",
+         image: "/carousel/mobile-medal-01.png",
         alt: "Troféus e medalhas para premiações",
     },
     {
         id: "carousel-mobile-02",
-        image: "/mobile2.png",
+          image: "/carousel/mobile-medal-02.png",
+        alt: "Medalhas personalizadas para eventos",
+    },
+    {
+        id: "carousel-mobile-03",
+        image: "/carousel/mobile-medal-03.png",
         alt: "Medalhas personalizadas para eventos",
     },
 ];
