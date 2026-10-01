@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/layout/Header/Header";
 import Footer from "@/layout/Footer/Footer";
 import { Icon } from "lucide-react";
+import SiteShell from "@/layout/SiteShell";
 
 export const metadata = {
   title: "Medalhas Personalizadas e Troféus | Fabricação e Venda no Brasil",
@@ -51,9 +52,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className="min-h-screen flex flex-col">
-        <Header />
-        {children}
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
